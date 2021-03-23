@@ -2,12 +2,20 @@
   <div id="app">
     <img src="./assets/logo.png">
     <router-view/>
+    <Tabbar></Tabbar>
   </div>
 </template>
 
 <script>
+import Tabbar from'./components/Tabbar'
 export default {
-  name: 'App'
+  name: 'App',
+  created:function(){
+    this.$router.push('/')
+  },
+  components:{
+    Tabbar
+  }
 }
 </script>
 
